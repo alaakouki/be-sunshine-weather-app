@@ -1,6 +1,7 @@
 var searchBtn = document.querySelector(".searchbtn");
 var inputValue = document.querySelector(".search-value");
 
+var savedCities = JSON.parse(localStorage.getItem("City Name")) || [];
 
 // variables of main day:
 var currentDate = document.querySelector(".current-date");
@@ -162,9 +163,9 @@ searchBtn.addEventListener("click", function () {
     }
     getApi(requestWeatherApiUrl);
 
-
+savedCities.push(inputValue.value);
     // working
-    window.localStorage.setItem("City Name", inputValue.value);
+    window.localStorage.setItem("City Name", JSON.stringify(savedCities));
 
 
     // Making search history :
@@ -173,7 +174,7 @@ searchBtn.addEventListener("click", function () {
     newCitySearch.className = "requested-city";
 
     // create text node :
-    var newCityNameText = document.createTextNode(localStorage.getItem("City Name"));
+    var newCityNameText = document.createTextNode(inputValue.value);
 
     // append text to appear inside button
     newCitySearch.appendChild(newCityNameText);
@@ -183,11 +184,25 @@ searchBtn.addEventListener("click", function () {
 
     
 
-
-
-
-
 });
+
+for (var i = 0; i < savedCities.length; i++) {
+    var searchHistory = document.getElementById("search-history");
+    var newCitySearch = document.createElement("button");
+    newCitySearch.className = "requested-city";
+
+    // create text node :
+    var newCityNameText = document.createTextNode(savedCities[i]);
+
+    // append text to appear inside button
+    newCitySearch.appendChild(newCityNameText);
+
+    // append button to be after Recently viewed in search history
+    searchHistory.appendChild(newCitySearch);
+}
+
+
+
 
 
 // just for multiple titles
