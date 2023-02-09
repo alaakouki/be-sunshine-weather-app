@@ -4,6 +4,7 @@
     --off-white-color: #f2f2f2;
     --light-gray-color: #DBDFE2;
     --gray-color: #9197A6;
+    --dark-blue-color: #1565C0 ;
 
 }
 
@@ -24,6 +25,12 @@ header h1 {
     text-align:left;
     color: var(--off-white-color);
     background-image: linear-gradient(15deg, #b31217 30%, #1488cc 100%);
+}
+
+.info-side {
+    margin-top: 15px;
+    color: var(--dark-blue-color);
+    visibility: visible;
 }
 
 .search-side {
@@ -58,6 +65,20 @@ width: 100%;
     padding-top: 5px;
     border-top: 2px solid var(--light-gray-color);
     color: var(--gray-color);
+}
+
+
+.requested-city {
+    margin-top: 5px;
+    border: 1px solid var(--gray-color);
+    border-radius: 3px;
+    background-color: none;
+    color: var(--gray-color);
+}
+
+.requested-city:hover {
+background-color: var(--gray-color);
+color: var(--off-white-color);
 }
 
 .forecast-days {
