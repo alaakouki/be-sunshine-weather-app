@@ -2,34 +2,104 @@
     --youtube-red-color: #b31217;
     --blue-color: #1488cc;
     --off-white-color: #f2f2f2;
+    --light-gray-color: #DBDFE2;
+    --gray-color: #9197A6;
+
 }
 
+* {
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+}
 
+.main-content-container {
+    margin-right: 0;
+}
 
 header h1 {
     padding: 10px 0px 10px 15px;
     width: 100%;
     height: 10vh;
+    min-height: 70px;
     text-align:left;
     color: var(--off-white-color);
-    /* youtube - gradient - uigradients.com */
-    /* background-image: linear-gradient(15deg, #b31217 25%, #e52d27 100%); */
-    /* skyline - gradient - uigradients.com */
-    /* background-image: linear-gradient(15deg, #2b32b2 25%, #1488cc 100%); */
     background-image: linear-gradient(15deg, #b31217 30%, #1488cc 100%);
 }
 
 .search-side {
     display: flex;
     flex-direction: column;
-    /* margin-left: 5px; */
+    margin-left: 10px;
+    width: 30%;
 }
 
 .search-side >div {
     width:100%;
 }
 
+.search-value {
+height: 36px;
+width: 100%;
+}
+
+.searchbtn {
+    width: 100%;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+#search-history {
+    display: flex;
+    flex-direction: column;
+}
+
+.recently-search {
+    margin-top: 10px;
+    padding-top: 5px;
+    border-top: 2px solid var(--light-gray-color);
+    color: var(--gray-color);
+}
+
+.forecast-days {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .forecast {
     display: flex;
+    justify-content: space-between;
     
+}
+
+.one-of-5,
+.two-of-5,
+.three-of-5,
+.four-of-5,
+.five-of-5 {
+/* border: 1px solid var(--youtube-red-color); */
+border-radius: 8px;
+margin-left: 10px;
+padding: 5px;
+/* background-image: linear-gradient(165deg,#b31217 30%, #1488cc 100%); */
+background-image: linear-gradient(165deg,#1565C0 5%, #b92b27 100%);
+
+color: var(--off-white-color);
+width: 200px;
+}
+
+.present-day {
+    visibility: hidden;
+}
+
+.display-currentDay {
+    background-color: #EFFBFF;
+    width: 100%;
+    /* margin-right: 10px; */
+    padding-right: 10px;
+    border-radius: 8px;
+}
+
+footer {
+    height: 10vh;
+    min-height: 70px;
 }
