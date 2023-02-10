@@ -56,7 +56,7 @@ var presentDay = document.querySelector(".present-day");
 
 
 
-searchBtn.addEventListener("click", function () {
+searchBtn.addEventListener("click", function (searching) {
     // event.preventDefault();
 
     infoSide.style.visibility = "hidden";
@@ -67,7 +67,6 @@ searchBtn.addEventListener("click", function () {
 
     // open weather API link :
     var requestWeatherApiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + inputValue.value + "&appid=f6b53d11e4e1d813df0a764640a0b00e";
-    // var requestWeatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + inputValue.value + "&appid=f6b53d11e4e1d813df0a764640a0b00e";
 
     function getApi(requestWeatherApiUrl) {
         fetch(requestWeatherApiUrl)
@@ -96,75 +95,75 @@ searchBtn.addEventListener("click", function () {
 
 
                 // 1st day after today / 1-5 / :
-                var forDateOneOnly = data.list[5].dt_txt;
+                var forDateOneOnly = data.list[8].dt_txt;
                 const forDateOneOnlyArr = forDateOneOnly.split(" ");
                 // console.log(forDateOneOnlyArr);
-                // dateOne.innerText = data.list[5].dt_txt;
+                // dateOne.innerText = data.list[8].dt_txt;
                 dateOne.innerText = forDateOneOnlyArr[0];
-                var iconOne = data.list[5].weather[0].icon;
+                var iconOne = data.list[8].weather[0].icon;
                 weatherIconOne.src = "https://openweathermap.org/img/wn/" + iconOne + "@2x.png";
-                tempOne.innerText = "Temp: \n" + data.list[5].main.temp;
-                windOne.innerText = "Wind: \n" + data.list[5].wind.deg + "MPH";
-                humidityOne.innerText = "Humidity: \n" + data.list[5].main.humidity + "%";
+                tempOne.innerText = "Temp: \n" + data.list[8].main.temp;
+                windOne.innerText = "Wind: \n" + data.list[8].wind.deg + "MPH";
+                humidityOne.innerText = "Humidity: \n" + data.list[8].main.humidity + "%";
 
 
                 // 2nd day after today / 2-5 / :
-                var forDateTwoOnly = data.list[14].dt_txt;
+                var forDateTwoOnly = data.list[16].dt_txt;
                 const forDateTwoOnlyArr = forDateTwoOnly.split(" ");
                 // console.log(forDateTwoOnlyArr);
-                // dateTwo.innerText = data.list[14].dt_txt;
+                // dateTwo.innerText = data.list[16].dt_txt;
                 dateTwo.innerText = forDateTwoOnlyArr[0];
-                var iconTwo = data.list[14].weather[0].icon;
+                var iconTwo = data.list[16].weather[0].icon;
                 weatherIconTwo.src = "https://openweathermap.org/img/wn/" + iconTwo + "@2x.png";
-                tempTwo.innerText = "Temp: \n" + data.list[14].main.temp;
-                windTwo.innerText = "Wind: \n" + data.list[14].wind.deg + "MPH";
-                humidityTwo.innerText = "Humidity: \n" + data.list[14].main.humidity + "%";
+                tempTwo.innerText = "Temp: \n" + data.list[16].main.temp;
+                windTwo.innerText = "Wind: \n" + data.list[16].wind.deg + "MPH";
+                humidityTwo.innerText = "Humidity: \n" + data.list[16].main.humidity + "%";
 
 
                 // 3rd day after today / 3-5 / :
-                var forDateThreeOnly = data.list[22].dt_txt;
+                var forDateThreeOnly = data.list[24].dt_txt;
                 const forDateThreeOnlyArr = forDateThreeOnly.split(" ");
                 // console.log(forDateThreeOnlyArr);
-                // dateThree.innerText = data.list[22].dt_txt;
+                // dateThree.innerText = data.list[24].dt_txt;
                 dateThree.innerText = forDateThreeOnlyArr[0];
-                var iconThree = data.list[22].weather[0].icon;
+                var iconThree = data.list[24].weather[0].icon;
                 weatherIconThree.src = "https://openweathermap.org/img/wn/" + iconThree + "@2x.png";
-                tempThree.innerText = "Temp: \n" + data.list[22].main.temp;
-                windThree.innerText = "Wind: \n" + data.list[22].wind.deg + "MPH";
-                humidityThree.innerText = "Humidity: \n" + data.list[22].main.humidity + "%";
+                tempThree.innerText = "Temp: \n" + data.list[24].main.temp;
+                windThree.innerText = "Wind: \n" + data.list[24].wind.deg + "MPH";
+                humidityThree.innerText = "Humidity: \n" + data.list[24].main.humidity + "%";
 
 
                 // 4th day after today / 4-5 / :
-                var forDateFourOnly = data.list[30].dt_txt;
+                var forDateFourOnly = data.list[32].dt_txt;
                 const forDateFourOnlyArr = forDateFourOnly.split(" ");
                 // console.log(forDateFourOnlyArr);
-                // dateFour.innerText = data.list[30].dt_txt;
+                // dateFour.innerText = data.list[32].dt_txt;
                 dateFour.innerText = forDateFourOnlyArr[0];
-                var iconFour = data.list[30].weather[0].icon;
+                var iconFour = data.list[32].weather[0].icon;
                 weatherIconFour.src = "https://openweathermap.org/img/wn/" + iconFour + "@2x.png";
-                tempFour.innerText = "Temp: \n" + data.list[30].main.temp;
-                windFour.innerText = "Wind: \n" + data.list[30].wind.deg + "MPH";
-                humidityFour.innerText = "Humidity: \n" + data.list[30].main.humidity + "%";
+                tempFour.innerText = "Temp: \n" + data.list[32].main.temp;
+                windFour.innerText = "Wind: \n" + data.list[32].wind.deg + "MPH";
+                humidityFour.innerText = "Humidity: \n" + data.list[32].main.humidity + "%";
 
 
                 // 5th day after today / 5-5 / :
-                var forDateFiveOnly = data.list[38].dt_txt;
+                var forDateFiveOnly = data.list[39].dt_txt;
                 const forDateFiveOnlyArr = forDateFiveOnly.split(" ");
                 // console.log(forDateFiveOnlyArr);
-                // dateFive.innerText = data.list[38].dt_txt;
+                // dateFive.innerText = data.list[39].dt_txt;
                 dateFive.innerText = forDateFiveOnlyArr[0];
-                var iconFive = data.list[38].weather[0].icon;
+                var iconFive = data.list[39].weather[0].icon;
                 weatherIconFive.src = "https://openweathermap.org/img/wn/" + iconFive + "@2x.png";
-                tempFive.innerText = "Temp: \n" + data.list[38].main.temp;
-                windFive.innerText = "Wind: \n" + data.list[38].wind.deg + "MPH";
-                humidityFive.innerText = "Humidity: \n" + data.list[38].main.humidity + "%";
+                tempFive.innerText = "Temp: \n" + data.list[39].main.temp;
+                windFive.innerText = "Wind: \n" + data.list[39].wind.deg + "MPH";
+                humidityFive.innerText = "Humidity: \n" + data.list[39].main.humidity + "%";
 
             })
     }
     getApi(requestWeatherApiUrl);
 
-savedCities.push(inputValue.value);
-    // working
+savedCities.unshift(inputValue.value);
+    
     window.localStorage.setItem("City Name", JSON.stringify(savedCities));
 
 
@@ -201,7 +200,10 @@ for (var i = 0; i < savedCities.length; i++) {
     searchHistory.appendChild(newCitySearch);
 }
 
-
+// newCitySearch.addEventListener("click", function(recalling) {
+//     newCitySearch = savedCities[i];
+//     return this.searching;
+// });
 
 
 
