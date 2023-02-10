@@ -185,26 +185,34 @@ savedCities.unshift(inputValue.value);
 
 });
 
+var searchHistory = document.getElementById("search-history");
 for (var i = 0; i < savedCities.length; i++) {
-    var searchHistory = document.getElementById("search-history");
     var newCitySearch = document.createElement("button");
     newCitySearch.className = "requested-city";
-
+    
     // create text node :
     var newCityNameText = document.createTextNode(savedCities[i]);
-
+    
     // append text to appear inside button
     newCitySearch.appendChild(newCityNameText);
-
+    
     // append button to be after Recently viewed in search history
     searchHistory.appendChild(newCitySearch);
 }
 
-// newCitySearch.addEventListener("click", function(recalling) {
+// searchHistory.addEventListener("click", ".requested-city", function(recalling) {
+//     var newCitySearch = document.createElement("button");
 //     newCitySearch = savedCities[i];
 //     return this.searching;
 // });
 
+
+
+searchHistory.addEventListener("click", (event) => {
+    if(event.target.requested-city === 'BUTTON') {
+      console.log(event.target.innerText)
+    }
+  })
 
 
 // just for multiple titles
