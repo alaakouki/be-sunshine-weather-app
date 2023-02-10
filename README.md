@@ -8,9 +8,9 @@ Be Sunshine - Weather App, it's a (weather dashboard) allowing you to check the 
 
 ## Mock-up
  Be Sunshine Weather App webpage URL:
- https:
+ https://alaakouki.github.io/be-sunshine-weather-app/
 
 The following image is how Be Sunshine Weather App webpage shows to
 users on desktop screens:
-![alt -screenshot-1](.///-1.png)
-![alt -screenshot-2](.///-2.png)
+![alt be-sunshine-weather-app-screenshot-1](./assets/images/be-sunshine-weather-app-screenshot-1.png)
+![alt be-sunshine-weather-app-screenshot-2](./assets/images/be-sunshine-weather-app-screenshot-2.png)
