@@ -209,8 +209,10 @@ for (var i = 0; i < savedCities.length; i++) {
 
 
 searchHistory.addEventListener("click", (event) => {
-    if(event.target.requested-city === 'BUTTON') {
+    if(event.target.tagName === "class") {
       console.log(event.target.innerText)
+      newCitySearch = savedCities[i];
+      return this.searching;
     }
   })
 
